@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.jetbrains.kotlinx:kotlinx-serialization-runtime:1.0-M1-1.4.0-rc">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlinx/kotlinx-serialization-runtime/1.0-M1-1.4.0-rc/kotlinx-serialization-runtime-1.0-M1-1.4.0-rc.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlinx/kotlinx-serialization-runtime/1.0-M1-1.4.0-rc/kotlinx-serialization-runtime-1.0-M1-1.4.0-rc-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlinx/kotlinx-serialization-runtime/1.0-M1-1.4.0-rc/kotlinx-serialization-runtime-1.0-M1-1.4.0-rc-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

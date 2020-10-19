@@ -1,0 +1,24 @@
+{"root":
+  [
+    {
+      "sourceStationId": 1,
+      "transportationType": "BUS",
+      "targetStationId": 2
+      },
+    {
+      "sourceStationId": 1,
+      "transportationType": "TAXI",
+      "targetStationId": 2
+    },
+    {
+      "sourceStationId": 3,
+      "transportationType": "BUS",
+      "targetStationId": 1
+    },
+    {
+      "sourceStationId": 1,
+      "transportationType": "TAXI",
+      "targetStationId": 3
+    }
+  ]
+}
