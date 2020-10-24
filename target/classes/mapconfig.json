@@ -1,10 +1,10 @@
-{"root":
-  [
+{
+  "jsonDataPoints": [
     {
       "sourceStationId": 1,
       "transportationType": "BUS",
       "targetStationId": 2
-      },
+    },
     {
       "sourceStationId": 1,
       "transportationType": "TAXI",
