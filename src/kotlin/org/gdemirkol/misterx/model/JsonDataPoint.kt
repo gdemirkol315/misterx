@@ -1,5 +1,7 @@
 package org.gdemirkol.misterx.model
 
-class JsonDataPoint {
+import kotlinx.serialization.Serializable
 
-}
+
+@Serializable
+data class JsonDataPoint (val sourceStationId: Int, val transportationType:String, val targetStationId:Int)

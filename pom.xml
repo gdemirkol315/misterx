@@ -21,22 +21,20 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.1.2</maven-jar-plugin.version>
         <kotlin.version>1.4.10</kotlin.version>
+        <serialization.version>1.0.0</serialization.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib-jdk8</artifactId>
-            <version>${kotlin.versiozn}</version>
+            <version>${kotlin.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.jetbrains.kotlinx</groupId>
             <artifactId>kotlinx-serialization-json-jvm</artifactId>
             <version>1.0.0</version>
         </dependency>
-
-
         <dependency>
             <groupId>org.jetbrains.kotlinx</groupId>
             <artifactId>kotlinx-serialization-runtime</artifactId>
@@ -85,27 +83,22 @@
                         <goals>
                             <goal>compile</goal>
                         </goals>
-                        <configuration>
-                            <sourceDirs>
-                                <source>src/kotlin</source>
-                                <source>src/main/java</source>
-                            </sourceDirs>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>test-compile</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>test-compile</goal>
-                        </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <jvmTarget>1.8</jvmTarget>
+                    <compilerPlugins>
+                        <plugin>kotlinx-serialization</plugin>
+                    </compilerPlugins>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.jetbrains.kotlin</groupId>
+                        <artifactId>kotlin-maven-serialization</artifactId>
+                        <version>${kotlin.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
-
 
 </project>
