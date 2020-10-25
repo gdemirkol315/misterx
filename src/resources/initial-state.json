@@ -8,9 +8,10 @@
     {
       "stationId": 2,
       "playerId": 1,
-      "playerType": "DETECTIVE"    },
+      "playerType": "DETECTIVE"
+    },
     {
-      "stationId": 1,
+      "stationId": 3,
       "playerId": 2,
       "playerType": "BOBBY"
     }

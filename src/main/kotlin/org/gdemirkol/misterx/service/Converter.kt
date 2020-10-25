@@ -33,7 +33,7 @@ fun JsonBoardMap.convert() = BoardMap(
 )
 
 
-fun JsonInitialState.convert(): BoardState {
+fun JsonInitialState.convert(boardMap: BoardMap): BoardState {
     val players = this
             .playerPositions
             .map {
@@ -47,7 +47,10 @@ fun JsonInitialState.convert(): BoardState {
     val stationStates = this
             .playerPositions
             .map { jsonPlayerPosition ->
-                StationState(jsonPlayerPosition.stationId, players.first { it.playerId == jsonPlayerPosition.playerId })
+                StationState(
+                        station = boardMap.mapStateLookup.getValue(jsonPlayerPosition.stationId),
+                        player = players.first { it.playerId == jsonPlayerPosition.playerId }
+                )
             }
 
     return BoardState(players, stationStates)

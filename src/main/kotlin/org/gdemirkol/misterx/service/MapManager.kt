@@ -21,6 +21,6 @@ class MapManager {
         val jsonInitialState = Json.decodeFromString(JsonInitialState.serializer(), initialStateJsonString)
 
         boardMap = jsonBoardMap.convert()
-        boardState = jsonInitialState.convert()
+        boardState = jsonInitialState.convert(boardMap)
     }
 }
