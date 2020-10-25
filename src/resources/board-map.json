@@ -1,5 +1,5 @@
 {
-  "jsonDataPoints": [
+  "connections": [
     {
       "sourceStationId": 1,
       "transportationType": "BUS",

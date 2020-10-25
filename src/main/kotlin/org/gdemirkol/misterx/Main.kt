@@ -4,5 +4,13 @@ import org.gdemirkol.misterx.service.MapManager
 
 fun main(args: Array<String>) {
     val mapManager = MapManager()
-    mapManager.loadMapConfig()
+    println("Board - Stations")
+    mapManager.boardMap.stations.forEach { println(it) }
+    println()
+    println()
+    println("Initial Board State - Players")
+    mapManager.boardState.players.forEach { println(it) }
+    println()
+    println("Initial Board State - Station Sates")
+    mapManager.boardState.stationStates.forEach { println(it) }
 }
