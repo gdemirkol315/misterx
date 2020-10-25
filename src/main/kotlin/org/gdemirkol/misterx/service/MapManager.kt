@@ -12,7 +12,8 @@ class MapManager {
         val jsonBoardMap = Json.decodeFromString(JsonBoardMap.serializer(), fileContent)
 
         jsonBoardMap.convert().stations.forEach {
-            println(it)
+            println(it.stationId.toString() + ": " + it.connections)
+
         }
     }
 }
