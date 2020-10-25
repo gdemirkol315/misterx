@@ -2,18 +2,14 @@ package org.gdemirkol.misterx.service
 
 
 import kotlinx.serialization.json.Json
+import org.gdemirkol.misterx.model.BoardMap
 import org.gdemirkol.misterx.model.JsonBoardMap
 
+
 class MapManager {
-    fun loadMapConfig() {
+    fun loadMapConfig(): BoardMap {
         val fileContent = MapManager::class.java.getResource("/mapconfig.json").readText()
-
-        //https://www.rockandnull.com/kotlin-json/
-        val jsonBoardMap = Json.decodeFromString(JsonBoardMap.serializer(), fileContent)
-
-        jsonBoardMap.convert().stations.forEach {
-            println(it.stationId.toString() + ": " + it.connections)
-
-        }
+        return Json.decodeFromString(JsonBoardMap.serializer(), fileContent).convert();
     }
+
 }

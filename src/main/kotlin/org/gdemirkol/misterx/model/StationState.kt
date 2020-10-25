@@ -13,4 +13,20 @@ class StationState(stationId: Int,
                                 connections = boardMap.mapStateLookup.getValue(it.targetStationId).connections,
                                 playerId = playerId)
                     }
+    fun getAllStationStates(boardMap: BoardMap, stationStates: List<StationState>, noOfRounds: Int): List<StationState> {
+        val localStationStates = stationStates.toMutableList()
+        if (noOfRounds == 0)
+            return localStationStates
+
+        localStationStates.forEach() {
+            it.getNextStationStates(boardMap).forEach(
+                    localStationStates.add(it)
+            )
+        }
+
+        getAllStationStates(boardMap,localStationStates,noOfRounds-1)
+        return localStationStates
+    }
 }
+
+
