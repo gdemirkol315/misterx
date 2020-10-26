@@ -15,20 +15,7 @@ data class StationState(val station: Station,
                                 station = boardMap.mapStateLookup.getValue(it.targetStationId),
                                 player = player.move(it.transportationType))
                     }
-    fun getAllStationStates(boardMap: BoardMap, stationStates: List<StationState>, noOfRounds: Int): List<StationState> {
-        val localStationStates = stationStates.toMutableList()
-        if (noOfRounds == 0)
-            return localStationStates
 
-        localStationStates.forEach() {
-            it.getNextStationStates(boardMap).forEach(
-                    localStationStates.add(it)
-            )
-        }
 
-        getAllStationStates(boardMap,localStationStates,noOfRounds-1)
-        return localStationStates
-    }
 }
-
 
