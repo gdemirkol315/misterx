@@ -21,7 +21,10 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
         <kotlin.version>1.4.10</kotlin.version>
+        <ktor.version>1.4.1</ktor.version>
         <serialization.version>1.0.0</serialization.version>
+        <kotlinx-serialization-runtime.version>1.0-M1-1.4.0-rc</kotlinx-serialization-runtime.version>
+        <kotlinx.html.version>0.7.1</kotlinx.html.version>
     </properties>
 
     <dependencies>
@@ -31,6 +34,26 @@
             <version>${kotlin.version}</version>
         </dependency>
         <dependency>
+            <groupId>io.ktor</groupId>
+            <artifactId>ktor-server-core</artifactId>
+            <version>${ktor.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.ktor</groupId>
+            <artifactId>ktor-server-netty</artifactId>
+            <version>${ktor.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.microutils</groupId>
+            <artifactId>kotlin-logging</artifactId>
+            <version>1.12.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlinx</groupId>
+            <artifactId>kotlinx-html-jvm</artifactId>
+            <version>${kotlinx.html.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.jetbrains.kotlinx</groupId>
             <artifactId>kotlinx-serialization-json-jvm</artifactId>
             <version>${serialization.version}</version>
@@ -38,7 +61,7 @@
         <dependency>
             <groupId>org.jetbrains.kotlinx</groupId>
             <artifactId>kotlinx-serialization-runtime</artifactId>
-            <version>1.0-M1-1.4.0-rc</version>
+            <version>${kotlinx-serialization-runtime.version}</version>
         </dependency>
 
         <dependency>
@@ -166,6 +189,16 @@
         <repository>
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>jcenter</id>
+            <url>https://jcenter.bintray.com</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
