@@ -1,4 +1,16 @@
 {
+  "stations": [
+    {
+      "stationId": 1,
+      "locationX": 585,
+      "locationY": 225
+    },
+    {
+      "stationId": 2,
+      "locationX": 885,
+      "locationY": 40
+    }
+  ],
   "connections": [
     {
       "sourceStationId": 1,

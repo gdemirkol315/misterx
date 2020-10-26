@@ -16,6 +16,20 @@ data class StationState(val station: Station,
                                 player = player.move(it.transportationType))
                     }
 
-
+    fun getPossibleNextStates(boardMap: BoardMap, numberOfRounds: Int): List<StationState> {
+        return if (numberOfRounds == 0) {
+            emptyList()
+        } else {
+            val nextStates = this.getNextStationStates(boardMap)
+            if (numberOfRounds > 1) {
+                listOf(
+                        nextStates,
+                        nextStates.flatMap { it.getPossibleNextStates(boardMap, numberOfRounds - 1) }
+                ).flatten()
+            } else {
+                nextStates
+            }
+        }
+    }
 }
 
