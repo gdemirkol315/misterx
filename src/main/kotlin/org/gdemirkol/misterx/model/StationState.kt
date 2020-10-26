@@ -1,17 +1,19 @@
 package org.gdemirkol.misterx.model
 
-class StationState(stationId: Int,
-                   connections: List<Connection>,
-                   val playerId: Int) : Station(stationId, connections) {
+import org.gdemirkol.misterx.model.board.BoardMap
+import org.gdemirkol.misterx.model.board.Player
+import org.gdemirkol.misterx.model.board.Station
+
+data class StationState(val station: Station,
+                        val player: Player) {
     fun getNextStationStates(boardMap: BoardMap): List<StationState> =
-            boardMap
-                    .mapStateLookup.getValue(stationId)
+            station
                     .connections
+                    .filter { player.canMove(it.transportationType) }
                     .map {
                         StationState(
-                                stationId = it.targetStationId,
-                                connections = boardMap.mapStateLookup.getValue(it.targetStationId).connections,
-                                playerId = playerId)
+                                station = boardMap.mapStateLookup.getValue(it.targetStationId),
+                                player = player.move(it.transportationType))
                     }
     fun getAllStationStates(boardMap: BoardMap, stationStates: List<StationState>, noOfRounds: Int): List<StationState> {
         val localStationStates = stationStates.toMutableList()
