@@ -2,13 +2,213 @@
   "stations": [
     {
       "stationId": 1,
-      "locationX": 585,
-      "locationY": 225
+      "locationX": 363,
+      "locationY": 107
     },
     {
       "stationId": 2,
-      "locationX": 885,
-      "locationY": 40
+      "locationX": 892,
+      "locationY": 45
+    },
+    {
+      "stationId": 3,
+      "locationX": 1247,
+      "locationY": 43
+    },
+    {
+      "stationId": 4,
+      "locationX": 1466,
+      "locationY": 27
+    },
+    {
+      "stationId": 5,
+      "locationX": 2317,
+      "locationY": 61
+    },
+    {
+      "stationId": 6,
+      "locationX": 2583,
+      "locationY": 64
+    },
+    {
+      "stationId": 7,
+      "locationX": 2831,
+      "locationY": 88
+    },
+    {
+      "stationId": 8,
+      "locationX": 243,
+      "locationY": 233
+    },
+    {
+      "stationId": 9,
+      "locationX": 454,
+      "locationY": 230
+    },
+    {
+      "stationId": 10,
+      "locationX": 1068,
+      "locationY": 196
+    },
+    {
+      "stationId": 11,
+      "locationX": 1233,
+      "locationY": 218
+    },
+    {
+      "stationId": 12,
+      "locationX": 1367,
+      "locationY": 189
+    },
+    {
+      "stationId": 13,
+      "locationX": 1620,
+      "locationY": 178
+    },
+    {
+      "stationId": 14,
+      "locationX": 1876,
+      "locationY": 130
+    },
+    {
+      "stationId": 15,
+      "locationX": 2137,
+      "locationY": 111
+    },
+    {
+      "stationId": 16,
+      "locationX": 2376,
+      "locationY": 202
+    },
+    {
+      "stationId": 18,
+      "locationX": 128,
+      "locationY": 331
+    },
+    {
+      "stationId": 19,
+      "locationX": 320,
+      "locationY": 346
+    },
+    {
+      "stationId": 20,
+      "locationX": 566,
+      "locationY": 277
+    },
+    {
+      "stationId": 21,
+      "locationX":820,
+      "locationY":372
+    },
+    {
+      "stationId": 22,
+      "locationX":1243,
+      "locationY":404
+    },
+    {
+      "stationId": 23,
+      "locationX":1445,
+      "locationY":295
+    },
+    {
+      "stationId": 24,
+      "locationX":1766,
+      "locationY":304
+    },
+    {
+      "stationId": 25,
+      "locationX":1910,
+      "locationY":341
+    },
+    {
+      "stationId": 26,
+      "locationX":2111,
+      "locationY":195
+    },
+    {
+      "stationId": 28,
+      "locationX":2243,
+      "locationY":272
+    },
+    {
+      "stationId": 29,
+      "locationX":2582,
+      "locationY":347
+    },
+    {
+      "stationId": 31,
+      "locationX":212,
+      "locationY":420
+    },
+    {
+      "stationId": 32,
+      "locationX":494,
+      "locationY":482
+    },
+    {
+      "stationId": 33,
+      "locationX":711,
+      "locationY":435
+    },
+    {
+      "stationId": 34,
+      "locationX":1082,
+      "locationY":467
+    },
+    {
+      "stationId": 35,
+      "locationX":1305,
+      "locationY":516
+    },
+    {
+      "stationId": 37,
+      "locationX":1535,
+      "locationY":411
+    },
+    {
+      "stationId": 38,
+      "locationX":1835,
+      "locationY":419
+    },
+    {
+      "stationId": 41,
+      "locationX":2306,
+      "locationY":456
+    },
+    {
+      "stationId": 43,
+      "locationX":80,
+      "locationY":530
+    },
+    {
+      "stationId": 46,
+      "locationX":744,
+      "locationY":549
+    },
+    {
+      "stationId": 52,
+      "locationX":2069,
+      "locationY":513
+    },
+    {
+      "stationId": 58,
+      "locationX":440,
+      "locationY":666
+    },
+    {
+      "stationId": 65,
+      "locationX":1463,
+      "locationY":762
+    },
+    {
+      "stationId": 67,
+      "locationX":1737,
+      "locationY":713
+    },
+    {
+      "stationId": 89,
+      "locationX":2558,
+      "locationY":842
     }
   ],
   "connections": [
