@@ -12,6 +12,7 @@ class MapManager {
 
     val boardMap: BoardMap
     val boardState: BoardState
+    val assumedStationStates: MutableList<StationState>
 
     init {
         val boardMapJsonString = MapManager::class.java.getResource("/board-map.json").readText()
@@ -23,19 +24,24 @@ class MapManager {
 
         boardMap = jsonBoardMap.convert()
         boardState = jsonInitialState.convert(boardMap)
+        assumedStationStates = boardState.stationStates.toMutableList()
     }
-    fun getAllStationStates(stationStates: List<StationState>, noOfRounds: Int): List<StationState> {
+
+    fun getAllStationStates(stationStates: List<StationState>, noOfRounds: Int) {
         val newStationStates = stationStates.toMutableList()
         if (noOfRounds == 0)
-            return newStationStates
+            return
 
         stationStates.forEach() {
             it.getNextStationStates(boardMap).forEach() {
-                newStationStates.add(it)
+                if (!newStationStates.contains(it))
+                    newStationStates.add(it)
+                if (!assumedStationStates.contains(it))
+                    assumedStationStates.add(it)
+
             }
         }
         getAllStationStates(newStationStates, noOfRounds - 1)
-        return newStationStates
 
     }
 }

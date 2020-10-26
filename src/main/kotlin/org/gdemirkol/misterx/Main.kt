@@ -16,6 +16,7 @@ fun main(args: Array<String>) {
     println()
     println()
     println("Board State - Station Sates - After 3 rounds")
-    mapManager.getAllStationStates(mapManager.boardState.stationStates,3).forEach { println(it) }
+    mapManager.getAllStationStates(mapManager.boardState.stationStates,3)
+    mapManager.assumedStationStates.forEach{ println(it)}
 
 }
