@@ -6,33 +6,41 @@ import org.gdemirkol.misterx.model.board.*
 import org.gdemirkol.misterx.model.config.JsonBoardMap
 import org.gdemirkol.misterx.model.config.JsonInitialState
 
-fun JsonBoardMap.convert() = BoardMap(
-        stations = this.connections
-                .flatMap { jsonDataPoint -> //wie versteht er das jsonDataPoint JsonConnection ist?
-                    listOf(
-                            Station(
-                                    stationId = jsonDataPoint.sourceStationId,
-                                    connections = listOf(
-                                            Connection(
-                                                    transportationType = TransportationType.valueOf(jsonDataPoint.transportationType),
-                                                    targetStationId = jsonDataPoint.targetStationId)
-                                    )
-                            ),
-                            Station(
-                                    stationId = jsonDataPoint.targetStationId,
-                                    connections = listOf(
-                                            Connection(
-                                                    transportationType = TransportationType.valueOf(jsonDataPoint.transportationType),
-                                                    targetStationId = jsonDataPoint.sourceStationId)
-                                    ),stationPosition = MapPosition()
+fun JsonBoardMap.convert(): BoardMap {
+    val stationLocationLookup = this
+            .stations
+            .map { it.stationId to MapPosition(it.locationX, it.locationY) }
+            .toMap()
 
-                            )
-                    )
-                }
-                .groupBy { it.stationId }
-                .map { it.value.reduce { acc, station -> Station(it.key, listOf(acc.connections, station.connections).flatten()) } }
-)
+    return BoardMap(
+            stations = this.connections
+                    .flatMap { jsonDataPoint -> //wie versteht er das jsonDataPoint JsonConnection ist?
+                        listOf(
+                                Station(
+                                        stationId = jsonDataPoint.sourceStationId,
+                                        connections = listOf(
+                                                Connection(
+                                                        transportationType = TransportationType.valueOf(jsonDataPoint.transportationType),
+                                                        targetStationId = jsonDataPoint.targetStationId)
+                                        ),
+                                        stationPosition = stationLocationLookup.getOrDefault(jsonDataPoint.sourceStationId, MapPosition(0, 0))
+                                ),
+                                Station(
+                                        stationId = jsonDataPoint.targetStationId,
+                                        connections = listOf(
+                                                Connection(
+                                                        transportationType = TransportationType.valueOf(jsonDataPoint.transportationType),
+                                                        targetStationId = jsonDataPoint.sourceStationId)
+                                        ),
+                                        stationPosition = stationLocationLookup.getOrDefault(jsonDataPoint.targetStationId, MapPosition(0, 0))
 
+                                )
+                        )
+                    }
+                    .groupBy { it.stationId }
+                    .map { it.value.reduce { acc, station -> Station(it.key, listOf(acc.connections, station.connections).flatten(), acc.stationPosition) } }
+    )
+}
 
 fun JsonInitialState.convert(boardMap: BoardMap): BoardState {
     val players = this
