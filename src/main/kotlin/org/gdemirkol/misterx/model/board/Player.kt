@@ -19,6 +19,8 @@ sealed class Player(open val playerId: Int,
         TransportationType.FERRY -> (blackTickets > 0)
     }
 
+
+
     fun move(transportationType: TransportationType): Player = when (transportationType) {
         TransportationType.BUS -> this.copy(busTickets = this.busTickets - 1)
         TransportationType.TAXI -> this.copy(taxiTickets = this.taxiTickets - 1)

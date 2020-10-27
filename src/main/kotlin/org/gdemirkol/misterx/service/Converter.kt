@@ -1,6 +1,7 @@
 package org.gdemirkol.misterx.service
 
 import org.gdemirkol.misterx.model.BoardState
+import org.gdemirkol.misterx.model.MapPosition
 import org.gdemirkol.misterx.model.StationState
 import org.gdemirkol.misterx.model.board.*
 import org.gdemirkol.misterx.model.config.JsonBoardMap

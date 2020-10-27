@@ -1,6 +1,6 @@
 package org.gdemirkol.misterx.model.board
 
-import org.gdemirkol.misterx.service.MapPosition
+import org.gdemirkol.misterx.model.MapPosition
 
 data class Station(val stationId: Int, val connections: List<Connection>, val stationPosition: MapPosition) {
 
