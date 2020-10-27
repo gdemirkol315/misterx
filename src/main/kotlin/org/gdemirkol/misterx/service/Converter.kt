@@ -8,7 +8,7 @@ import org.gdemirkol.misterx.model.config.JsonInitialState
 
 fun JsonBoardMap.convert() = BoardMap(
         stations = this.connections
-                .flatMap { jsonDataPoint ->
+                .flatMap { jsonDataPoint -> //wie versteht er das jsonDataPoint JsonConnection ist?
                     listOf(
                             Station(
                                     stationId = jsonDataPoint.sourceStationId,
@@ -24,7 +24,8 @@ fun JsonBoardMap.convert() = BoardMap(
                                             Connection(
                                                     transportationType = TransportationType.valueOf(jsonDataPoint.transportationType),
                                                     targetStationId = jsonDataPoint.sourceStationId)
-                                    )
+                                    ),stationPosition = MapPosition()
+
                             )
                     )
                 }

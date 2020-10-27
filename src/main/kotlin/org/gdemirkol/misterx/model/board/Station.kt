@@ -1,6 +1,8 @@
 package org.gdemirkol.misterx.model.board
 
-data class Station(val stationId: Int, val connections: List<Connection>) {
+import org.gdemirkol.misterx.service.MapPosition
+
+data class Station(val stationId: Int, val connections: List<Connection>, val stationPosition: MapPosition) {
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
