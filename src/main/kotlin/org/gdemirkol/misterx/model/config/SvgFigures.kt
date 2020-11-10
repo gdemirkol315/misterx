@@ -27,7 +27,13 @@ fun drawCircle() {
             fill = "#aaa70f"
         }
     }
-
+    /*
+    <svg width="550" height="800" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100 200 A50 50 0 0 0 200 200" stroke="black" fill="yellow"/>
+        <path d="M100 200 A50 50 0 1 1 200 200" stroke="black" fill="blue"/>
+        <path d="M100 200 A100 100 0 0 0 200 200" stroke="black" fill="red"/>
+    </svg>
+    */
     FileWriter("circle.svg").use {
         svg.render(it, RenderMode.FILE)
     }
