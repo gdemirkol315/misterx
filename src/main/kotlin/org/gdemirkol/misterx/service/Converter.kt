@@ -65,3 +65,22 @@ fun JsonInitialState.convert(boardMap: BoardMap): BoardState {
 
     return BoardState(players, stationStates)
 }
+fun convertStationsToColors(transportationTypes:List<TransportationType>): Array<String>{
+    var colors = Array<String>(transportationTypes.size){"$it"}
+    var i:Int=0
+
+    transportationTypes.forEach{
+        colors.set(i, it.convertToColor(it))
+        i++
+    }
+
+    return colors
+}
+
+fun TransportationType.convertToColor(transportationType: TransportationType): String{
+    if (transportationType == TransportationType.TAXI) return "yellow"
+    if (transportationType == TransportationType.BUS) return "blue"
+    if (transportationType == TransportationType.METRO) return "red"
+    if (transportationType == TransportationType.FERRY) return "black"
+    return "";
+}

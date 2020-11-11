@@ -1,8 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
-<style>
-svg .black-stroke { stroke: black; stroke-width: 2; }
-svg .fur-color { fill: white; }
-</style>
-<circle class="black-stroke" cx="180" cy="140" fill="#aaa70f" id="face" r="80"/>
-</svg>
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">    <path d="M0 200 A50 50 0 0 0 200 200" stroke="black" fill="blue"/>    <path d="M0 200 A50 50 0 1 1 200 200" stroke="black" fill="blue"/>    <path d="M0 200 A50 20 0 1 1 200 200" stroke="black" fill="red"/>    <path d="M0 200 A50 20 0 0 0 200 200" stroke="black" fill="yellow"/></svg>
