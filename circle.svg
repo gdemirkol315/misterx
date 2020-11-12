@@ -1,1 +1,13 @@
-<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">    <path d="M0 200 A50 50 0 0 0 200 200" stroke="black" fill="blue"/>    <path d="M0 200 A50 50 0 1 1 200 200" stroke="black" fill="blue"/>    <path d="M0 200 A50 20 0 1 1 200 200" stroke="black" fill="red"/>    <path d="M0 200 A50 20 0 0 0 200 200" stroke="black" fill="yellow"/></svg>
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+<style>svg .taxi { stroke: black; fill: yellow}
+svg .bus { stroke: black; fill: blue}
+svg .metro { stroke: black; fill: red}
+svg .no-metro { stroke: black; fill: white; }
+svg .metro-text { stroke: grey; fill: white}
+svg .no-metro-text { stroke: black; fill: black; }</style>
+<path class="bus" d="M0 25 A12.5 12.5 0 0 0 50 25" id="LowerHalf"/>
+<path class="taxi" d="M0 25 A12.5 12.5 0 1 1 50 25" id="UpperHalf"/>
+<rect class="metro" height="25" id="rectangle" width="40" x="5" y="12.5"/>
+<text class="metro-text" font-family="monospace" font-size="17.5" font-weight="bold" text-anchor="middle" x="25" y="30">1</text>
+</svg>
