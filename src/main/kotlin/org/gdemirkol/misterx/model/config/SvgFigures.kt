@@ -51,6 +51,22 @@ fun Station.svg(viewportOffsetX:Int, viewportOffsetY:Int): SVG {
                 fontSize = "17.5"
             }
 
+            line{
+                cssClass="no-metro text"
+                x1="0"
+                y1="25"
+                x2="5"
+                y2="25"
+            }
+
+            line{
+                cssClass="no-metro text"
+                x1="45"
+                y1="25"
+                x2="50"
+                y2="25"
+            }
+
         }
     }
 }

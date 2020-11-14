@@ -11,7 +11,7 @@ internal class SvgFiguresKtTest{
     @Test
     fun drawCircleTaxi (){
         val mapManager= MapManager()
-        val circle = mapManager.boardMap.stations.first().svg(0,0,100,100)
+        val circle = mapManager.boardMap.stations.first().svg(0,0)
         FileWriter("circle.svg").use {
             circle.render(it, RenderMode.FILE)
         }

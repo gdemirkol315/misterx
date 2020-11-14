@@ -16,7 +16,7 @@ fun JsonBoardMap.convert(): BoardMap {
 
     return BoardMap(
             stations = this.connections
-                    .flatMap { jsonDataPoint -> //wie versteht er das jsonDataPoint JsonConnection ist?
+                    .flatMap { jsonDataPoint -> 
                         listOf(
                                 Station(
                                         stationId = jsonDataPoint.sourceStationId,
