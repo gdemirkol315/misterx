@@ -16,9 +16,6 @@ fun Station.svg(viewportOffsetX:Int, viewportOffsetY:Int): SVG {
     return SVG.svg(true) {
         this.viewBox = "$viewportOffsetX $viewportOffsetY $VIEWPORT_WIDTH $VIEWPORT_HEIGHT"
         g {
-            //attributes["transform"] = "scale(0.5)"
-            // Label
-
             path {
                 cssClass = if (transportationTypes.contains(TransportationType.BUS)) "bus" else "taxi"
                 id = "LowerHalf"
@@ -70,7 +67,6 @@ fun Station.svg(viewportOffsetX:Int, viewportOffsetY:Int): SVG {
         }
     }
 }
-
 
 fun BoardMap.svg(): SVG {
     val stations = this.stations

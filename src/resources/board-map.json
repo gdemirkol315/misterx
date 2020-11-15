@@ -161,6 +161,11 @@
       "locationY":516
     },
     {
+      "stationId": 36,
+      "locationX":1396,
+      "locationY":530
+    },
+    {
       "stationId": 37,
       "locationX":1535,
       "locationY":411
@@ -171,7 +176,22 @@
       "locationY":419
     },
     {
+      "stationId": 39,
+      "locationX":1970,
+      "locationY":399
+    },
+    {
+      "stationId": 40,
+      "locationX":2209,
+      "locationY":500
+    },
+    {
       "stationId": 41,
+      "locationX":2306,
+      "locationY":456
+    },
+    {
+      "stationId": 42,
       "locationX":2306,
       "locationY":456
     },
