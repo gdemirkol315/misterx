@@ -258,79 +258,9 @@
       "targetStationId": 46
     },
     {
-      "sourceStationId": 8,
-      "transportationType": "TAXI",
-      "targetStationId": 19
-    },
-    {
-      "sourceStationId": 8,
-      "transportationType": "TAXI",
-      "targetStationId": 18
-    },
-    {
-      "sourceStationId": 9,
-      "transportationType": "TAXI",
-      "targetStationId": 19
-    },
-    {
-      "sourceStationId": 9,
-      "transportationType": "TAXI",
-      "targetStationId": 20
-    },
-    {
-      "sourceStationId": 18,
-      "transportationType": "TAXI",
-      "targetStationId": 43
-    },
-    {
-      "sourceStationId": 18,
-      "transportationType": "TAXI",
-      "targetStationId": 31
-    },
-    {
-      "sourceStationId": 19,
-      "transportationType": "TAXI",
-      "targetStationId": 32
-    },
-    {
-      "sourceStationId": 20,
-      "transportationType": "TAXI",
-      "targetStationId": 2
-    },
-    {
-      "sourceStationId": 20,
-      "transportationType": "TAXI",
-      "targetStationId": 33
-    },
-    {
       "sourceStationId": 2,
       "transportationType": "TAXI",
       "targetStationId": 10
-    },
-    {
-      "sourceStationId": 10,
-      "transportationType": "TAXI",
-      "targetStationId": 11
-    },
-    {
-      "sourceStationId": 10,
-      "transportationType": "TAXI",
-      "targetStationId": 34
-    },
-    {
-      "sourceStationId": 10,
-      "transportationType": "TAXI",
-      "targetStationId": 21
-    },
-    {
-      "sourceStationId": 11,
-      "transportationType": "TAXI",
-      "targetStationId": 22
-    },
-    {
-      "sourceStationId": 11,
-      "transportationType": "TAXI",
-      "targetStationId": 3
     },
     {
       "sourceStationId": 3,
@@ -356,6 +286,81 @@
       "sourceStationId": 4,
       "transportationType": "TAXI",
       "targetStationId": 13
+    },
+    {
+      "sourceStationId": 4,
+      "transportationType": "TAXI",
+      "targetStationId": 13
+    },
+    {
+      "sourceStationId": 5,
+      "transportationType": "TAXI",
+      "targetStationId": 16
+    },
+    {
+      "sourceStationId": 6,
+      "transportationType": "TAXI",
+      "targetStationId": 29
+    },
+    {
+      "sourceStationId": 6,
+      "transportationType": "TAXI",
+      "targetStationId": 7
+    },
+    {
+      "sourceStationId": 7,
+      "transportationType": "TAXI",
+      "targetStationId": 17
+    },
+    {
+      "sourceStationId": 7,
+      "transportationType": "BUS",
+      "targetStationId": 17
+    },
+    {
+      "sourceStationId": 8,
+      "transportationType": "TAXI",
+      "targetStationId": 19
+    },
+    {
+      "sourceStationId": 8,
+      "transportationType": "TAXI",
+      "targetStationId": 18
+    },
+    {
+      "sourceStationId": 9,
+      "transportationType": "TAXI",
+      "targetStationId": 19
+    },
+    {
+      "sourceStationId": 9,
+      "transportationType": "TAXI",
+      "targetStationId": 20
+    },
+    {
+      "sourceStationId": 10,
+      "transportationType": "TAXI",
+      "targetStationId": 11
+    },
+    {
+      "sourceStationId": 10,
+      "transportationType": "TAXI",
+      "targetStationId": 34
+    },
+    {
+      "sourceStationId": 10,
+      "transportationType": "TAXI",
+      "targetStationId": 21
+    },
+    {
+      "sourceStationId": 11,
+      "transportationType": "TAXI",
+      "targetStationId": 22
+    },
+    {
+      "sourceStationId": 11,
+      "transportationType": "TAXI",
+      "targetStationId": 3
     },
     {
       "sourceStationId": 12,
@@ -448,11 +453,6 @@
       "targetStationId": 41
     },
     {
-      "sourceStationId": 5,
-      "transportationType": "TAXI",
-      "targetStationId": 16
-    },
-    {
       "sourceStationId": 16,
       "transportationType": "TAXI",
       "targetStationId": 28
@@ -461,6 +461,41 @@
       "sourceStationId": 16,
       "transportationType": "TAXI",
       "targetStationId": 29
+    },
+    {
+      "sourceStationId": 17,
+      "transportationType": "TAXI",
+      "targetStationId": 29
+    },
+    {
+      "sourceStationId": 17,
+      "transportationType": "TAXI",
+      "targetStationId": 30
+    },
+    {
+      "sourceStationId": 18,
+      "transportationType": "TAXI",
+      "targetStationId": 43
+    },
+    {
+      "sourceStationId": 18,
+      "transportationType": "TAXI",
+      "targetStationId": 31
+    },
+    {
+      "sourceStationId": 19,
+      "transportationType": "TAXI",
+      "targetStationId": 32
+    },
+    {
+      "sourceStationId": 20,
+      "transportationType": "TAXI",
+      "targetStationId": 2
+    },
+    {
+      "sourceStationId": 20,
+      "transportationType": "TAXI",
+      "targetStationId": 33
     },
     {
       "sourceStationId": 21,
