@@ -916,6 +916,411 @@
       "sourceStationId": 50,
       "transportationType": "METRO",
       "targetStationId": 67
+    },
+    {
+      "sourceStationId": 51,
+      "transportationType": "TAXI",
+      "targetStationId": 52
+    },
+    {
+      "sourceStationId": 51,
+      "transportationType": "BUS",
+      "targetStationId": 52
+    },
+    {
+      "sourceStationId": 51,
+      "transportationType": "TAXI",
+      "targetStationId": 67
+    },
+    {
+      "sourceStationId": 51,
+      "transportationType": "BUS",
+      "targetStationId": 67
+    },
+    {
+      "sourceStationId": 51,
+      "transportationType": "TAXI",
+      "targetStationId": 68
+    },
+    {
+      "sourceStationId": 52,
+      "transportationType": "TAXI",
+      "targetStationId": 69
+    },
+    {
+      "sourceStationId": 52,
+      "transportationType": "BUS",
+      "targetStationId": 69
+    },
+    {
+      "sourceStationId": 53,
+      "transportationType": "TAXI",
+      "targetStationId": 54
+    },
+    {
+      "sourceStationId": 53,
+      "transportationType": "TAXI",
+      "targetStationId": 69
+    },
+    {
+      "sourceStationId": 54,
+      "transportationType": "TAXI",
+      "targetStationId": 55
+    },
+    {
+      "sourceStationId": 54,
+      "transportationType": "TAXI",
+      "targetStationId": 70
+    },
+    {
+      "sourceStationId": 54,
+      "transportationType": "BUS",
+      "targetStationId": 70
+    },
+    {
+      "sourceStationId": 55,
+      "transportationType": "TAXI",
+      "targetStationId": 71
+    },
+    {
+      "sourceStationId": 55,
+      "transportationType": "BUS",
+      "targetStationId": 71
+    },
+    {
+      "sourceStationId": 56,
+      "transportationType": "TAXI",
+      "targetStationId": 91
+    },
+    {
+      "sourceStationId": 57,
+      "transportationType": "TAXI",
+      "targetStationId": 58
+    },
+    {
+      "sourceStationId": 57,
+      "transportationType": "TAXI",
+      "targetStationId": 73
+    },
+    {
+      "sourceStationId": 58,
+      "transportationType": "TAXI",
+      "targetStationId": 59
+    },
+    {
+      "sourceStationId": 58,
+      "transportationType": "BUS",
+      "targetStationId": 59
+    },
+    {
+      "sourceStationId": 58,
+      "transportationType": "TAXI",
+      "targetStationId": 74
+    },
+    {
+      "sourceStationId": 58,
+      "transportationType": "BUS",
+      "targetStationId": 74
+    },
+    {
+      "sourceStationId": 58,
+      "transportationType": "METRO",
+      "targetStationId": 74
+    },
+    {
+      "sourceStationId": 59,
+      "transportationType": "TAXI",
+      "targetStationId": 75
+    },
+    {
+      "sourceStationId": 59,
+      "transportationType": "TAXI",
+      "targetStationId": 76
+    },
+    {
+      "sourceStationId": 59,
+      "transportationType": "BUS",
+      "targetStationId": 76
+    },
+    {
+      "sourceStationId": 60,
+      "transportationType": "TAXI",
+      "targetStationId": 61
+    },
+    {
+      "sourceStationId": 60,
+      "transportationType": "TAXI",
+      "targetStationId": 76
+    },
+    {
+      "sourceStationId": 61,
+      "transportationType": "TAXI",
+      "targetStationId": 62
+    },
+    {
+      "sourceStationId": 61,
+      "transportationType": "METRO",
+      "targetStationId": 62
+    },
+    {
+      "sourceStationId": 61,
+      "transportationType": "TAXI",
+      "targetStationId": 76
+    },
+    {
+      "sourceStationId": 61,
+      "transportationType": "TAXI",
+      "targetStationId": 78
+    },
+    {
+      "sourceStationId": 61,
+      "transportationType": "BUS",
+      "targetStationId": 78
+    },
+    {
+      "sourceStationId": 62,
+      "transportationType": "TAXI",
+      "targetStationId": 79
+    },
+    {
+      "sourceStationId": 62,
+      "transportationType": "METRO",
+      "targetStationId": 79
+    },
+    {
+      "sourceStationId": 63,
+      "transportationType": "TAXI",
+      "targetStationId": 64
+    },
+    {
+      "sourceStationId": 63,
+      "transportationType": "BUS",
+      "targetStationId": 64
+    },
+    {
+      "sourceStationId": 63,
+      "transportationType": "METRO",
+      "targetStationId": 64
+    },
+    {
+      "sourceStationId": 63,
+      "transportationType": "TAXI",
+      "targetStationId": 79
+    },
+    {
+      "sourceStationId": 63,
+      "transportationType": "BUS",
+      "targetStationId": 79
+    },
+    {
+      "sourceStationId": 63,
+      "transportationType": "METRO",
+      "targetStationId": 79
+    },
+    {
+      "sourceStationId": 63,
+      "transportationType": "TAXI",
+      "targetStationId": 80
+    },
+    {
+      "sourceStationId": 63,
+      "transportationType": "BUS",
+      "targetStationId": 80
+    },
+    {
+      "sourceStationId": 64,
+      "transportationType": "TAXI",
+      "targetStationId": 65
+    },
+    {
+      "sourceStationId": 64,
+      "transportationType": "BUS",
+      "targetStationId": 65
+    },
+    {
+      "sourceStationId": 64,
+      "transportationType": "METRO",
+      "targetStationId": 65
+    },
+    {
+      "sourceStationId": 64,
+      "transportationType": "TAXI",
+      "targetStationId": 81
+    },
+    {
+      "sourceStationId": 65,
+      "transportationType": "TAXI",
+      "targetStationId": 66
+    },
+    {
+      "sourceStationId": 65,
+      "transportationType": "BUS",
+      "targetStationId": 66
+    },
+    {
+      "sourceStationId": 65,
+      "transportationType": "METRO",
+      "targetStationId": 66
+    },
+    {
+      "sourceStationId": 65,
+      "transportationType": "TAXI",
+      "targetStationId": 82
+    },
+    {
+      "sourceStationId": 65,
+      "transportationType": "BUS",
+      "targetStationId": 82
+    },
+    {
+      "sourceStationId": 66,
+      "transportationType": "TAXI",
+      "targetStationId": 67
+    },
+    {
+      "sourceStationId": 66,
+      "transportationType": "BUS",
+      "targetStationId": 67
+    },
+    {
+      "sourceStationId": 66,
+      "transportationType": "METRO",
+      "targetStationId": 67
+    },
+    {
+      "sourceStationId": 66,
+      "transportationType": "TAXI",
+      "targetStationId": 82
+    },
+    {
+      "sourceStationId": 67,
+      "transportationType": "TAXI",
+      "targetStationId": 68
+    },
+    {
+      "sourceStationId": 67,
+      "transportationType": "METRO",
+      "targetStationId": 68
+    },
+    {
+      "sourceStationId": 67,
+      "transportationType": "METRO",
+      "targetStationId": 83
+    },
+    {
+      "sourceStationId": 67,
+      "transportationType": "TAXI",
+      "targetStationId": 84
+    },
+    {
+      "sourceStationId": 67,
+      "transportationType": "BUS",
+      "targetStationId": 102
+    },
+    {
+      "sourceStationId": 68,
+      "transportationType": "TAXI",
+      "targetStationId": 69
+    },
+    {
+      "sourceStationId": 68,
+      "transportationType": "METRO",
+      "targetStationId": 89
+    },
+    {
+      "sourceStationId": 68,
+      "transportationType": "TAXI",
+      "targetStationId": 85
+    },
+    {
+      "sourceStationId": 69,
+      "transportationType": "TAXI",
+      "targetStationId": 86
+    },
+    {
+      "sourceStationId": 69,
+      "transportationType": "BUS",
+      "targetStationId": 86
+    },
+    {
+      "sourceStationId": 70,
+      "transportationType": "TAXI",
+      "targetStationId": 71
+    },
+    {
+      "sourceStationId": 70,
+      "transportationType": "TAXI",
+      "targetStationId": 87
+    },
+    {
+      "sourceStationId": 70,
+      "transportationType": "BUS",
+      "targetStationId": 87
+    },
+    {
+      "sourceStationId": 71,
+      "transportationType": "TAXI",
+      "targetStationId": 72
+    },
+    {
+      "sourceStationId": 71,
+      "transportationType": "TAXI",
+      "targetStationId": 89
+    },
+    {
+      "sourceStationId": 71,
+      "transportationType": "BUS",
+      "targetStationId": 89
+    },
+    {
+      "sourceStationId": 71,
+      "transportationType": "METRO",
+      "targetStationId": 89
+    },
+    {
+      "sourceStationId": 72,
+      "transportationType": "TAXI",
+      "targetStationId": 90
+    },
+    {
+      "sourceStationId": 72,
+      "transportationType": "BUS",
+      "targetStationId": 90
+    },
+    {
+      "sourceStationId": 72,
+      "transportationType": "TAXI",
+      "targetStationId": 91
+    },
+    {
+      "sourceStationId": 72,
+      "transportationType": "BUS",
+      "targetStationId": 91
+    },
+    {
+      "sourceStationId": 73,
+      "transportationType": "TAXI",
+      "targetStationId": 74
+    },
+    {
+      "sourceStationId": 73,
+      "transportationType": "TAXI",
+      "targetStationId": 92
+    },
+    {
+      "sourceStationId": 74,
+      "transportationType": "TAXI",
+      "targetStationId": 92
+    },
+    {
+      "sourceStationId": 74,
+      "transportationType": "BUS",
+      "targetStationId": 94
+    },
+    {
+      "sourceStationId": 75,
+      "transportationType": "TAXI",
+      "targetStationId": 94
     }
 
   ]
