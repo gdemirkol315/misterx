@@ -5,6 +5,7 @@ import kotlinx.serialization.json.Json
 import org.gdemirkol.misterx.model.BoardState
 import org.gdemirkol.misterx.model.StationState
 import org.gdemirkol.misterx.model.board.BoardMap
+import org.gdemirkol.misterx.model.board.TransportationType
 import org.gdemirkol.misterx.model.config.JsonBoardMap
 import org.gdemirkol.misterx.model.config.JsonInitialState
 
@@ -29,4 +30,11 @@ class MapManager {
                 .stationStates
                 .flatMap { it.getPossibleNextStates(boardMap, numberOfRounds) }
     }
+
+    fun getPossibleNextStates(numberOfRounds: Int, transportationTypes: List<TransportationType>): List<StationState> {
+        return boardState
+                .stationStates
+                .flatMap { it.getPossibleNextStates(boardMap, numberOfRounds)}
+    }
+
 }
