@@ -1,9 +1,6 @@
 package org.gdemirkol.misterx.model
 
-import org.gdemirkol.misterx.model.board.BoardMap
-import org.gdemirkol.misterx.model.board.Player
-import org.gdemirkol.misterx.model.board.Station
-import org.gdemirkol.misterx.model.board.TransportationType
+import org.gdemirkol.misterx.model.board.*
 
 data class StationState(val station: Station,
                         val player: Player) {
@@ -16,16 +13,32 @@ data class StationState(val station: Station,
                                 station = boardMap.mapStateLookup.getValue(it.targetStationId),
                                 player = player.move(it.transportationType))
                     }
-    fun getNextStationStates(boardMap: BoardMap, transportationTypes: List<TransportationType>): List<StationState> =
-            //TODO: implement filtering stations with transportation types that have been used
-            station
-                    .connections
-                    .filter { player.canMove(it.transportationType) }
-                    .map {
-                        StationState(
-                                station=  boardMap.mapStateLookup.getValue(it.targetStationId),
-                                player = player.move(it.transportationType))
-                    }
+    //TODO: do cool Stefan stuff with map&filter
+    fun getNextPossibleStations(boardMap: BoardMap, transportationType: TransportationType): List<Station> {
+
+        var connections: List<Connection> = station.connections
+        lateinit var stations: MutableList<Station>
+        lateinit var possibleStationIds: MutableList<Int>
+
+        for (i in 1..connections.size) {
+            if (connections[i].transportationType==transportationType)
+                possibleStationIds.add(connections[i].targetStationId)
+        }
+
+        for (i in 1..possibleStationIds.size)
+            stations.add(boardMap.mapStateLookup.getValue(possibleStationIds[i]))
+
+        return stations;
+
+    }
+
+    fun getNextPossibleStations(boardMap: BoardMap, transportationTypes: List<TransportationType>): List<Station> {
+        lateinit var stations: MutableList<Station>
+        for (i in 1..transportationTypes.size)
+            stations.addAll(getNextPossibleStations(boardMap,transportationTypes[i]))
+        return stations
+    }
+
 
     fun getPossibleNextStates(boardMap: BoardMap, numberOfRounds: Int): List<StationState> {
         return if (numberOfRounds == 0) {
