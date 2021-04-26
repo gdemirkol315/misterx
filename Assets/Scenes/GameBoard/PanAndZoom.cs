@@ -4,14 +4,12 @@ using UnityEngine.InputSystem;
 // Attach this Script to the Background Sprite
 public class PanAndZoom : MonoBehaviour
 {
-    //[SerializeField] private float panSpeed = 50f;
+    [SerializeField] private float panSpeed = 1f;
     [SerializeField] private float zoomStep = 1f;
+
     private float minCameraSize;
     private float maxCameraSize;
-    private float mapMinX;
-    private float mapMaxX;
-    private float mapMinY;
-    private float mapMaxY;
+    private Rect mapBoundingBox;
 
     [SerializeField] private Camera cam;
     private SpriteRenderer mapSprite;
@@ -29,13 +27,11 @@ public class PanAndZoom : MonoBehaviour
         Vector3 mapSize = mapSprite.sprite.bounds.size;
         Vector3 mapPosition = mapSprite.transform.position;
 
-        maxCameraSize = Mathf.Max(mapSize.x / cam.aspect / 2f, mapSize.y / 2f);
+        float menuHeight = 300f / Screen.height * cam.orthographicSize * 2f;
+        maxCameraSize = Mathf.Min(mapSize.x / cam.aspect / 2f, mapSize.y / 2f- menuHeight);
         minCameraSize = maxCameraSize / 10f;
 
-        mapMinX = mapPosition.x - mapSize.x / 2f;
-        mapMaxX = mapPosition.x + mapSize.x / 2f;
-        mapMinY = mapPosition.y - mapSize.y / 2f;
-        mapMaxY = mapPosition.y + mapSize.y / 2f;
+        mapBoundingBox = new Rect(mapPosition.x - mapSize.x / 2f, mapPosition.y - mapSize.y / 2f, mapSize.x, mapSize.y);
     }
 
     private void Update()
@@ -46,7 +42,7 @@ public class PanAndZoom : MonoBehaviour
     private Vector3 GetWorldMousePosition()
     {
         Vector2 mousePos = Mouse.current.position.ReadValue();
-        Vector3 worldPos = cam.ScreenToWorldPoint(mousePos);
+        Vector3 worldPos = cam.ScreenToWorldPoint(new Vector3(mousePos.x,mousePos.y,cam.nearClipPlane));
 
         return worldPos;
     }
@@ -61,6 +57,25 @@ public class PanAndZoom : MonoBehaviour
     private void OnMouseZoom(InputValue value)
     {
         float zoomFactor = value.Get<float>();
+        ZoomCamera(zoomFactor);
+    }
+
+    private void OnKeyboardZoom(InputValue value)
+    {
+        float zoomFactor = value.Get<float>();
+        ZoomCamera(zoomFactor);
+    }
+
+    private void OnKeyboardPan(InputValue value)
+    {
+        Vector2 panDirection = value.Get<Vector2>();
+        Vector3 currentPosition = GetWorldMousePosition();
+        Vector3 newPosition = new Vector3(currentPosition.x + panDirection.x * panSpeed, currentPosition.y + panDirection.y * panSpeed, currentPosition.z);
+        cam.transform.position = ClampCamera(newPosition);
+    }
+
+    private void ZoomCamera(float zoomFactor)
+    {
         if (zoomFactor != 0)
         {
             float newSize = cam.orthographicSize + zoomStep * zoomFactor;
@@ -74,23 +89,24 @@ public class PanAndZoom : MonoBehaviour
         if (isMousePanActive)
         {
             Vector3 diff = dragOrigin - GetWorldMousePosition();
-            cam.transform.position = ClampCamera(cam.transform.position + diff);
+            Vector3 newPosition = ClampCamera(cam.transform.position + diff);
+            cam.transform.position = ClampCamera(newPosition);
         }
     }
 
     private Vector3 ClampCamera(Vector3 targetPos)
     {
-        float menuHeight = 1.5f;
-
         float camHeight = cam.orthographicSize;
         float camWidth = cam.orthographicSize * cam.aspect;
 
-        float minX = mapMinX + camWidth;
-        float maxX = mapMaxX - camWidth;
+        float menuHeight = 300f / Screen.height * cam.orthographicSize * 2f;
+
+        float minX = mapBoundingBox.xMin + camWidth;
+        float maxX = mapBoundingBox.xMax - camWidth;
         float newX = Mathf.Clamp(targetPos.x, minX, maxX);
 
-        float minY = mapMinY + camHeight - menuHeight;
-        float maxY = mapMaxY - camHeight;
+        float minY = mapBoundingBox.yMin + camHeight - menuHeight;
+        float maxY = mapBoundingBox.yMax - camHeight;
         float newY = Mathf.Clamp(targetPos.y, minY, maxY);
 
         return new Vector3(newX, newY, targetPos.z);

@@ -237,7 +237,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
+                    "name": "positive",
                     "id": "1c9caafd-102f-48ac-98be-291483e8a05f",
                     "path": "<Keyboard>/numpadMinus",
                     "interactions": "",
@@ -248,7 +248,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
+                    "name": "negative",
                     "id": "fca0c7e5-e64b-4b20-b8c5-187e7d86a5a1",
                     "path": "<Keyboard>/numpadPlus",
                     "interactions": "",
@@ -270,7 +270,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
+                    "name": "positive",
                     "id": "9d204e6f-cc7b-49b7-a808-006a263788ad",
                     "path": "<Keyboard>/#(-)",
                     "interactions": "",
@@ -281,7 +281,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
+                    "name": "negative",
                     "id": "cb965010-8c1d-43bb-b28c-00bfdf611c2a",
                     "path": "<Keyboard>/#(+)",
                     "interactions": "",
