@@ -41,14 +41,17 @@ TagManager:
   - name: Background
     uniqueID: 4183641319
     locked: 0
-  - name: UIOverlay
-    uniqueID: 754273671
+  - name: BackgroundAssets
+    uniqueID: 2158977397
     locked: 0
   - name: Player
     uniqueID: 2874726737
     locked: 0
   - name: Effects
     uniqueID: 3250103379
+    locked: 0
+  - name: UIOverlay
+    uniqueID: 754273671
     locked: 0
   - name: Default
     uniqueID: 0
