@@ -4,16 +4,18 @@ using UnityEngine;
 
 public enum TransportationType
 {
-    Taxi,
-    Bus,
-    Subway,
-    Ferry
+    TAXI,
+    BUS,
+    SUBWAY,
+    FERRY
+
+       
 }
 
 public class Connection : MonoBehaviour
 {
     public TransportationType transportationType;
-    public int targetStationId;
+    public Station targetStation;
 
     // Start is called before the first frame update
     void Start()

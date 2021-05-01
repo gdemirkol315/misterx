@@ -1,37 +1,37 @@
 using System;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Station : MonoBehaviour
 {
-    private const String SPRITE_ASSETS_FOLDER = "Station/";
+    private const string SPRITE_ASSETS_FOLDER = "Station/";
 
     public int stationId;
-    public Connection[] connections;
-
-    private SpriteRenderer spriteRenderer;
-    public TMPro.TMP_Text labelTmpText;
+    public HashSet<Connection> connections = new HashSet<Connection>();
 
     // Start is called before the first frame update
     private void Start()
     {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        if (Array.Exists(connections, x => x.transportationType == TransportationType.Subway))
+        
+        SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+        TMP_Text labelTmpText = gameObject.GetComponentInChildren<TMP_Text>();
+
+        if (isTransportationTypeInConnections(TransportationType.SUBWAY))
         {
             spriteRenderer.sprite = Resources.Load<Sprite>(SPRITE_ASSETS_FOLDER + "station_subway");
             labelTmpText.color = Color.white;
-            Debug.Log("Station " + stationId + " is subway");
         }
-        else if (Array.Exists(connections, x => x.transportationType == TransportationType.Bus))
+        else if (isTransportationTypeInConnections(TransportationType.BUS))
         {
             spriteRenderer.sprite = Resources.Load<Sprite>(SPRITE_ASSETS_FOLDER + "station_bus");
             labelTmpText.color = Color.black;
-            Debug.Log("Station " + stationId + " is a bus");
         }
         else
         {
             spriteRenderer.sprite = Resources.Load<Sprite>(SPRITE_ASSETS_FOLDER + "station_taxi");
             labelTmpText.color = Color.black;
-            Debug.Log("Station " + stationId + " is a taxi");
         }
 
         labelTmpText.text = stationId.ToString();
@@ -40,5 +40,17 @@ public class Station : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+    }
+
+    private bool isTransportationTypeInConnections(TransportationType transportationType)
+    {
+        foreach (Connection connection in connections)
+        {
+            if (connection.transportationType==transportationType)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
