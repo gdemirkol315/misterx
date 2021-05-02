@@ -6,7 +6,7 @@ public enum TransportationType
 {
     TAXI,
     BUS,
-    SUBWAY,
+    METRO,
     FERRY
 
        

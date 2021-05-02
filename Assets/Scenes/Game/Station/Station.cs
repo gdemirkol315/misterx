@@ -18,9 +18,9 @@ public class Station : MonoBehaviour
 
         TMP_Text labelTmpText = gameObject.GetComponentInChildren<TMP_Text>();
 
-        if (isTransportationTypeInConnections(TransportationType.SUBWAY))
+        if (isTransportationTypeInConnections(TransportationType.METRO))
         {
-            spriteRenderer.sprite = Resources.Load<Sprite>(SPRITE_ASSETS_FOLDER + "station_subway");
+            spriteRenderer.sprite = Resources.Load<Sprite>(SPRITE_ASSETS_FOLDER + "station_metro");
             labelTmpText.color = Color.white;
         }
         else if (isTransportationTypeInConnections(TransportationType.BUS))
