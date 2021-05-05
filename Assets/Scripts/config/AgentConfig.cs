@@ -19,9 +19,11 @@ public class AgentConfig : ScriptableObject
         }
     }
 
-    public int busTickets {get; } = 11;
-    public int taxiTickets { get; } = 8;
-    public int metroTickets { get; } = 4;
+    public int[] startStations = { 8, 12, 21, 29, 37, 40, 58 };
+
+    public int taxiTickets = 11;
+    public int busTickets = 8;
+    public int metroTickets = 4;
 
     public AgentVariation[] agentVariations;
 

@@ -262,7 +262,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
+  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -303,11 +303,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 2
   m_AntialiasingQuality: 2
   m_StopNaN: 0
-  m_Dithering: 0
+  m_Dithering: 1
   m_ClearDepth: 1
   m_AllowXRRendering: 1
   m_RequiresDepthTexture: 0
@@ -424,6 +424,7 @@ GameObject:
   - component: {fileID: 1230582476}
   - component: {fileID: 1230582478}
   - component: {fileID: 1230582477}
+  - component: {fileID: 1230582479}
   m_Layer: 5
   m_Name: PlayerMenuPanel
   m_TagString: Untagged
@@ -489,6 +490,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230582475}
   m_CullTransparentMesh: 1
+--- !u!114 &1230582479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230582475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc745b38154c7346ab7e92f1a730e9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMenuItemPrefab: {fileID: 1330016047661226815, guid: a7afcee623766a5489d0c1cce33c83d1, type: 3}
 --- !u!224 &1264480365 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1330016047661226814, guid: a7afcee623766a5489d0c1cce33c83d1, type: 3}
@@ -815,7 +829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1330016047661226814, guid: a7afcee623766a5489d0c1cce33c83d1, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 300
+      value: 274.28
       objectReference: {fileID: 0}
     - target: {fileID: 1330016047661226814, guid: a7afcee623766a5489d0c1cce33c83d1, type: 3}
       propertyPath: m_SizeDelta.y
@@ -872,6 +886,10 @@ PrefabInstance:
     - target: {fileID: 1330016047661226815, guid: a7afcee623766a5489d0c1cce33c83d1, type: 3}
       propertyPath: m_Name
       value: PlayerMenuItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1330016047661226815, guid: a7afcee623766a5489d0c1cce33c83d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7afcee623766a5489d0c1cce33c83d1, type: 3}
